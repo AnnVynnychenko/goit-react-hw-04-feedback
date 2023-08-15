@@ -12,15 +12,15 @@ function App() {
   const leaveFeedback = feedbackType => {
     switch (feedbackType) {
       case 'good':
-        setGood(good + 1);
+        setGood(prevNumberGood => prevNumberGood + 1);
         break;
 
       case 'neutral':
-        setNeutral(neutral + 1);
+        setNeutral(prevNumberNeutral => prevNumberNeutral + 1);
         break;
 
       case 'bad':
-        setBad(bad + 1);
+        setBad(prevNumberBad => prevNumberBad + 1);
         break;
       default:
         break;
